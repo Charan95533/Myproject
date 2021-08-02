@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Admissions page</title>
+    <style type="text/css">
+        /*--HEADER FILE CSS--*/
+    .header img {
+  float: left;
+  width: 120px;
+  height: 55px;
+  background: #555;
+}
+.header img{
+
+    width: 100px;
+}
+
+.header h1 {
+  color: blue;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+}
+    .header{
+  
+      flex: 1 0 auto;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #04AA6D;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.tablink:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.tablink {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+.topnav-right {
+  float: right;
+  
+}
+#span{
+    text-align: center;
+}
+
+
+
+    /*--HEADER FILE CSS END--*/
+    </style>
+</head>
+<body style="background-color: hsl(88deg 6% 78%)">
+    <div class="header">
+
+        <img src="https://www.linkpicture.com/q/Logo_2.gif" alt="logo" />
+        <img src="https://www.linkpicture.com/q/25_30.jpg" class="2nd">
+        <h1>Nagarjuna College of Engineering and Technology</h1>
+
+<div class="topnav">
+   
+  <a class="tablink" onclick="openPage('Home', this)" href="maain.html">Home</a>
+  <a class="tablink" onclick="openPage('Admissions',this)" href="Admissions.html">Admissions</a>
+  <a class="tablink" onclick="openPage('Placements',this)" href="table js.html">Placements</a>
+  
+  <a class="tablink" onclick="openPage('Gallery', this)" href="Gallery.html">Gallery</a>
+  <div class="topnav-right">
+    <a class="tablink" onclick="openPage('Login', this)"href="login1.html">Login</a>
+    <a class="tablink" onclick="openPage('Signup', this)"href="Sign.html">Signup</a>
+    <a class="tablink" onclick="openPage('contact', this)" href="contact.html">Contact</a>
+  </div>
+</div>
+
+<script>
+function openPage(pageName,elmnt) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+}
+</script>
+</div>
+<h1>UG Courses</h1>
+<h2>How to Apply?</h2>
+<ol>
+    <li>Fill in the required details asked for in the application form available <span><a href="Sign.html">here</a></span></li>
+    <li>The application form will be reviewed and the candidate will be scheduled for a dedicated Screening Process (Telephonic or face-to-face)</li>
+    <li>After a thorough evaluation of the Screening Process, qualified candidates will be given an offer letter with a deadline for confirming the seat.</li>
+    <li>Payment of fees for seat confirmation.</li>
+</ol>
+<h2>Admission Requirements:</h2>
+<h2>Eligibility Criteria For UG Courses: </h2>
+<ol>
+<li>All candidates must have completed and passed 10+2, or equivalent examination.</li>
+<li>Secured minimum of 45% aggregate marks with Physics & Mathematics as compulsory subjects and any one of Chemistry / Biology / Biotechnology / Electronics / Computer Science as optional subject.</li>
+</ol>
+
+</body>
+</html>

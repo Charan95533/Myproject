@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table Filter</title>
+	<style type="text/css">
+
+
+	 /*--HEADER FILE CSS--*/
+  .header img {
+  float: left;
+  width: 120px;
+  height: 55px;
+  background: #555;
+}
+.header img{
+
+  width: 100px;
+}
+
+.header h1 {
+  color: #52904e;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+}
+  .header{
+  
+      flex: 1 0 auto;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#04AA6D ;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.tablink:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.tablink {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+.topnav-right {
+  float: right;
+  
+}
+#span{
+  text-align: center;
+}
+
+
+
+  /*--HEADER FILE CSS END--*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		#myinput{
+			    border: 3px solid #964be0d4;
+    margin-bottom: 20px;
+    padding: 2px 3px;
+    border-block-start-width: 1px;
+		}
+
+		#mytable{
+			border: 1px solid black;
+			border-collapse: collapse;
+			width: 100%;
+		}
+#mytable th, #mytable td{
+	text-align: left;
+	padding: 10px;
+}
+  #mytable tr{
+  	border-bottom: 1px solid #ddd;
+  }
+
+   #mytable tr.heading,#mytable tr:hover
+   {
+   	background-color: #f1f1f1;
+   }  
+   h3{
+   	text-align: center;
+    color: #3dd24f;
+   }
+   input{
+   	border: bisque;
+   	float: right;
+   } 
+	</style>
+</head>
+<body style="background-color: lightcyan;">
+	<div class="header">
+
+        <img src="https://www.linkpicture.com/q/Logo_2.gif" alt="logo" />
+        <img src="https://www.linkpicture.com/q/25_30.jpg" class="2nd">
+        <h1>Nagarjuna College of Engineering and Technology</h1>
+
+<div class="topnav">
+   
+  <a class="tablink" onclick="openPage('Home', this)" href="maain.html">Home</a>
+  <a class="tablink" onclick="openPage('Admissions',this)" href="Admissions.html">Admissions</a>
+  <a class="tablink" onclick="openPage('Placements',this)" href="table js.html">Placements</a>
+  
+  <a class="tablink" onclick="openPage('Gallery', this)" href="Gallery.html">Gallery</a>
+  <div class="topnav-right">
+    <a class="tablink" onclick="openPage('Login', this)"href="login1.html">Login</a>
+    <a class="tablink" onclick="openPage('Signup', this)"href="Sign.html">Signup</a>
+    <a class="tablink" onclick="openPage('contact', this)" href="contact.html">Contact</a>
+  </div>
+</div>
+
+<script>
+function openPage(pageName,elmnt) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+}
+</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<H3> Placements Details</H3>
+	<input type="text" id="myinput" onkeyup="find()" placeholder="type Department name">
+
+	<table id='mytable'>
+		<tr class='heading'>
+			<th style="width:10%;">Sl.No</th>
+			<th style="width: 40%;">Departments</th>
+			<th style="width: 25%;">No.of Students</th>
+			<th style="width:25%">No of Students Placed</th>
+		</tr>
+
+		<tr><td>1 </td><td>Electronics and Communication</td><td>500</td><td>250</td></tr>
+
+		<tr><td>2 </td><td>Computer Science</td><td>450</td><td>300</td></tr>
+
+		<tr><td>3 </td><td>Information Science</td><td>200</td><td>150</td></tr>
+
+		<tr><td>4</td><td>Civil</td><td>600</td><td>400</td></tr>
+
+		<tr><td>5</td><td>Mechanical</td><td>300</td><td>200</td></tr>
+
+		<tr><td>6 </td><td>CS-Data Science</td><td>150</td><td>80</td></tr>
+
+		<tr><td>7</td><td>CS-Artificial Inteligence and Learning</td><td>100</td><td>50</td></tr>
+
+        </table>
+<script type="text/javascript">
+	 function find() {
+	 	
+	 	input=document.getElementById('myinput');
+	 	filter=input.value.toUpperCase();
+
+        table=document.getElementById('mytable');
+          
+        tr=table.getElementsByTagName('tr');
+
+        for (var i = 0; i < tr.length; i++) {
+        	td=tr[i].getElementsByTagName('td')[0];
+
+        	if(td)
+        	{
+        		if(td.innerHTML.toUpperCase().indexOf(filter)>-1)
+        		{
+        			tr[i].style.display='';
+        		}
+        		else
+        		{
+        			tr[i].style.display='none';
+        		}
+        	}
+        }
+
+	 }
+
+</script>
+</body>
+</html>
