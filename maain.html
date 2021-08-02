@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+
+	.maindiv{
+  display: flex; 
+      flex-direction: column; 
+      
+}
+* {
+  box-sizing: border-box;
+}
+
+
+	/*--HEADER FILE CSS--*/
+	.header img {
+  float: left;
+  width: 120px;
+  height: 55px;
+  background: #555;
+}
+.header img{
+
+	width: 100px;
+}
+
+.header h1 {
+  color: #52904e;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+}
+	.header{
+  
+      flex: 1 0 auto;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#04AA6D ;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.tablink:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.tablink {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+.topnav-right {
+  float: right;
+  
+}
+#span{
+	text-align: center;
+}
+
+
+
+	/*--HEADER FILE CSS END--*/
+
+	/*--BODY FILE CSS--*/
+	/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 0px 10px 10px 10px ;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+  background-color:cadetblue ;
+}
+
+/* Middle column */
+.column.middle {
+  width: 75%;
+  background-color: lightgray;
+  
+ 
+}
+h2{
+	text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+}
+}
+
+
+
+
+
+
+
+	/*--BODY FILE CSS END--*/
+
+	/*--FOOTER FILE CSS--*/
+	.footer{
+		 background: black;
+      height: 50px;
+      flex-shrink: 0;
+      text-align: center;
+      padding: 5px 5px 5px 5px;
+	}
+	.footer-text{
+		color: white;
+	}
+	.footer-links{
+		color: white;
+	}
+
+
+	/*--FOOTER FILE CSS END--*/
+
+	</style>
+</head>
+<body>
+	<div class="maindiv">
+	<!--HEADER FILE-->
+	<div class="header" style="background-color: #92969352">
+
+		<img src="https://www.linkpicture.com/q/Logo_2.gif" alt="logo" />
+		<img src="https://www.linkpicture.com/q/25_30.jpg" class="2nd">
+		<h1>Nagarjuna College of Engineering and Technology</h1>
+
+<div class="topnav">
+   
+  <a class="tablink" onclick="openPage('Home', this)" href="maain.html">Home</a>
+  <a class="tablink" onclick="openPage('Admissions',this)" href="Admissions.html">Admissions</a>
+  <a class="tablink" onclick="openPage('Placements',this)" href="table js.html">Placements</a>
+  
+  <a class="tablink" onclick="openPage('Gallery', this)" href="Gallery.html">Gallery</a>
+  <div class="topnav-right">
+    <a class="tablink" onclick="openPage('Login', this)"href="login1.html">Login</a>
+    <a class="tablink" onclick="openPage('Signup', this)"href="Sign.html">Signup</a>
+    <a class="tablink" onclick="openPage('contact', this)" href="contact.html">Contact</a>
+  </div>
+</div>
+
+<script>
+function openPage(pageName,elmnt) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+}
+</script>
+</div>
+	</div>
+	<!--HEADER FILE END-->
+
+
+	<!--BODY FILE-->
+	
+		<div class="row">
+  <div class="column side">
+  	<h2>COURCES:</h2>
+    <h3>UG Branches</h3>
+    <ul>
+    	<li>Electronics and Communication</li>
+    	<li>Computer Science</li>
+    	<li>Information Science</li>
+    	<li>Mechanical</li>
+    	<li>Civil Engineering</li>
+    	<li>CS-Data Science</li>
+    	<li>CS-Artificial Inteligence and Learning</li>
+    </ul>
+    <h3>PG Branches</h3>
+    <ul>
+    	<li>MBA</li>
+    	<li>M-Tech Construction Technlogy</li>
+    	<li>M-Tech Structural Engineering</li>
+    </ul>
+    <h3>Basic Science</h3>
+    <ul>
+    	<li>Physics</li>
+    	<li>Chemistry</li>
+    	<li>Maths</li>
+    	<li>Humanities</li>
+    </ul>
+  </div>
+  
+  <div class="column middle">
+    <h2>About Nagarjuna College of Engineering(NCET)</h2>
+    <p>Nagarjuna College of Engineering and Technology (NCET), a self financing engineering college, was started in the year 2001 under the aegis of Nagarjuna Education Society, Bangalore. Nagarjuna Education Society (NES) was established in 1995 under the able guidance of Sri J.V.Rangaraju, leading industrialist and philanthropist. His commitment towards contribution to nation building is being achieved by imparting world-class education at all levels, viz. from primary, graduate, post-graduate to doctoral research degree.</p>
+    <p>Nagarjuna College of Engineering & Technology is affiliated to Visvesvaraya Technological University (VTU), Belagavi, the only technological university in the state of Karnataka, recognized by Government of Karnataka and approved by AICTE, New Delhi. NCET has crafted the vision to be among the Top Engineering Colleges in Karnataka. All the strategies and policies that we plan have this over-arching goal as a guide. The college has very good infrastructural facilities and the people at NCET are among the best in their fields.</p>
+    <p>The world is changing at exponential rate such that future is no more an extrapolation of the past and the present. It is important to be innovative to keep pace with the world. Science & technology have a great role to play in building India into a developed nation.</p>
+    <p>The Nagarjuna College of Engineering and Technology is strategically located on the Bangalore-Hyderabad National Highway, a road that falls on the Golden quadrangle. Its proximity to the International airport at Bangalore gives it strategic location and commutability. We have lush green campus spread of 72 acres with on-campus residential facility for boys, girls and staff. These hostels have amenities like mess, recreation room and state of art Gymnasium etc. Students are encouraged to actively participate in outdoor games as well. The college has a spacious library with well stacked books and well subscribed e-journals and books. The college is also a member of the VTU Consortium for e-resources.
+</p>
+<p>The college is recognized as Nodal Center for virtual lab facility, sponsored by MHRD, GOI. The institution is associated with IIT B, Mumbai for the project titled eYantra on Robotic Technology for students and staff. ISRO has recognized our college as one of the center to carry out the student projects under STUDSAT. The institution also has MoUs with different leading industries like EMC2 , Oracle, NCC, Data Talk etc.</p>
+<p>Our students visit Foreign Universities to upgrade their skills by doing summer internships & research projects.</p>
+  </div>
+  
+  
+</div>
+  
+
+		
+
+
+
+	<!--BODY FILE END-->
+
+
+
+	<!--FOOTER-->
+	<div class="footer">
+		<div class="row1">
+            <div class="col-md-12">
+              <strong class="footer-text">Copyright @ 2020 NCET. All Rights Reserved. Developed by </strong>
+            </div>
+            <div class="col-md-12">
+              <a href="privacy.html" class="footer-links">Privacy Policy</a> |
+              <a href="Terms and Conditions.html" class="footer-links">Terms and Conditions</a> |
+              <a href="contact.html" class="footer-links">Contact Us</a>
+            </div>
+        </div>
+	</div>
+	<!--FOOTER END-->
+	</div>
+
+
+</body>
+</html>
